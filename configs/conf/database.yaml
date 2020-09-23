@@ -1,2 +1,2 @@
 mysql:
-  dsn: "root:cFsc34^8pVm@tcp(rm-uf6c65tm4a773n6f935910.mysql.rds.aliyuncs.com:3306)/pt_merchant?charset=utf8mb4&parseTime=True&loc=Local"
+  dsn: "root:cFsc34^8pVm@tcp(rm-uf6c65tm4a773n6f935910.mysql.rds.aliyuncs.com:3306)/pt_oms?charset=utf8mb4&parseTime=True&loc=Local"
