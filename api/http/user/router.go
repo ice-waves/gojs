@@ -14,5 +14,9 @@ func RegisterRouter(egine *gin.Engine) {
 			info["name"] = "JsonSeaver"
 			ctx.JSON(http.StatusOK, info)
 		})
+
+		user.GET("/height", func(ctx *gin.Context) {
+			ctx.JSON(http.StatusOK, "187")
+		})
 	}
 }

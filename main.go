@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/ice-waves/gojs/api/http/user"
+	"github.com/ice-waves/gojs/configs/conf"
 	"net/http"
 )
 
@@ -15,6 +16,8 @@ func main() {
 	})
 	user.RegisterRouter(egine)
 
-
+	m := new(conf.Database)
+	databaseConf := m.GetConf()
+	fmt.Println(databaseConf.Mysql.DSN)
 	egine.Run(":8081")
 }
