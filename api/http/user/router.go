@@ -5,16 +5,14 @@ import (
 	"net/http"
 )
 
-func RegisterRouter(egin *gin.Engine) *gin.RouterGroup {
-	user := egin.Group("/user")
+func RegisterRouter(egine *gin.Engine) {
+	user := egine.Group("/user")
 	{
 		user.GET("/info", func(ctx *gin.Context) {
-			var info map[string]interface{}
-			info["name"] = "JsonSeaver"
+			info := make(map[string]interface{})
 			info["age"] = 26
+			info["name"] = "JsonSeaver"
 			ctx.JSON(http.StatusOK, info)
 		})
 	}
-
-	return user
 }
